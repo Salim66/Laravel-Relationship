@@ -24,7 +24,11 @@
                         <td>{{ $loop -> index+1 }}</td>
                         <td>{{ $post -> post_title }}</td>
                         <td>{{ $post -> post_slug }}</td>
-                        <td>{{ $post -> category -> category_name }}</td>
+                        <td>
+                        @foreach($post -> categories as $pst)
+                            {{ $pst -> category_name }} -
+                        @endforeach
+                        </td>
                         <td>
                             <a class="btn btn-sm btn-info" href="#">View</a>
                             <a class="btn btn-sm btn-warning" href="#">Edit</a>

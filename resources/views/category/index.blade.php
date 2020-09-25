@@ -25,7 +25,7 @@
                         <td>{{ $category -> category_name }}</td>
                         <td>{{ $category -> category_slug }}</td>
                         <td>
-                            @foreach($category -> post as $p)
+                            @foreach($category -> posts as $p)
                                 {{ $p -> post_title }} /
                             @endforeach
                         </td>

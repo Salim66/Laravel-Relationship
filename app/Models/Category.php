@@ -11,8 +11,8 @@ class Category extends Model
 
     protected $guarded = [];
 
-    public function post(){
-        return $this -> hasMany(Post::class, 'category_id', 'id');
+    public function posts(){
+        return $this -> belongsToMany(Post::class);
     }
 
 
